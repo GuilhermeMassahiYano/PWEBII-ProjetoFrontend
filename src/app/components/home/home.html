@@ -1,0 +1,112 @@
+<h1>Seja bem vindo ao aquário!</h1>
+
+<h4 class="text-danger">{{anuncio}}</h4>
+
+<br><br><br>
+
+<div class="d-flex gap-4">
+
+  <!-- PRIMEIRO CARD -->
+  <div class="card" style="width: 18rem;">
+
+    <img [src]="foto" class="imagem-card">
+
+    <div class="card-body">
+
+      <h5 class="card-title">
+        {{nomeProduto1 | uppercase}}
+
+        @if(promocao){
+          <span class="badge text-bg-primary">Promoção</span>
+        } @else {
+          <span class="badge text-bg-primary">Aproveite</span>
+        }
+      </h5>
+
+      <p class="card-text">
+        Disponiveis: {{idProduto | number:'2.0-1'}}
+      </p>
+
+      <p>
+        Nascimento: {{dataNascimento | date}}
+      </p>
+
+      <br>
+
+      <a href="#" class="btn btn-primary float-end">
+        {{precoProduto | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- SEGUNDO CARD -->
+  <div class="card" style="width: 18rem;">
+
+    <img [src]="foto1" class="imagem-card">
+
+    <div class="card-body">
+
+      <h5 class="card-title">
+        {{nomeProduto2 | uppercase}}
+
+        @if(promocao){
+          <span class="badge text-bg-primary">Promoção</span>
+        } @else {
+          <span class="badge text-bg-primary">Aproveite</span>
+        }
+      </h5>
+
+      <p class="card-text">
+        Disponiveis: {{idProduto1 | number:'2.0-1'}}
+      </p>
+
+      <p>
+        Nascimento: {{dataNascimento2 | date}}
+      </p>
+
+      <br>
+
+      <a href="#" class="btn btn-primary float-end">
+        {{precoProduto1 | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}
+      </a>
+
+    </div>
+  </div>
+
+    <!--Terceiro Card-->
+   <div class="card" style="width: 18rem;">
+
+    <img [src]="foto2" class="imagem-card">
+
+    <div class="card-body">
+
+      <h5 class="card-title">
+        {{nomeProduto3 | uppercase}}
+
+        @if(promocao){
+          <span class="badge text-bg-primary">Promoção</span>
+        } @else {
+          <span class="badge text-bg-primary">Aproveite</span>
+        }
+      </h5>
+
+      <p class="card-text">
+        Disponiveis: {{idProduto2 | number:'2.0-1'}}
+      </p>
+
+      <p>
+        Nascimento: {{dataNascimento3 | date}}
+      </p>
+
+      <br>
+
+      <a href="#" class="btn btn-primary float-end">
+        {{precoProduto2 | currency:'BRL':'symbol':'1.2-2':'pt-BR'}}
+      </a>
+
+    </div>
+  </div>
+
+</div>
